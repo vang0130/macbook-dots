@@ -10,6 +10,8 @@ Terminal: kitty
 
 Fetch: neofetch
 
+Terminal pront: starship
+
 Keyboard modifiedr: karabiner-elements
 
 spicetify -  theme: text, coloour-scheme: catppuccin mocha (modified)
