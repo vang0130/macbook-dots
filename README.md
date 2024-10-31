@@ -8,18 +8,15 @@ Application Launcher: raycast
 
 Terminal: kitty
 
-Fetch: neofetch
+Terminal prompt: starship
 
-Terminal pront: starship
+Keyboard modifier: karabiner-elements
 
-Keyboard modifiedr: karabiner-elements
+spicetify -  text
 
-spicetify -  theme: text, coloour-scheme: catppuccin mocha (modified)
-
-betterdiscord - theme: catppuccin mocha
+betterdiscord - system24
 
 additional:
 - shortcat
 - btop
-- cmatrix
-- ranger
+
