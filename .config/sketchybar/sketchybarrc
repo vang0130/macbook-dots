@@ -3,14 +3,14 @@ source "$HOME/.config/icons.sh"
 
 ##### Bar Appearance #####
 
-sketchybar --bar position=top height=40 blur_radius=0 color=0x00000000
+sketchybar --bar position=top height=36 blur_radius=0 color=0x00000000
 
 ##### Changing Defaults #####
 
 default=(
 	 icon.font="Jetbrains Mono Nl:Bold:14.0"
 	 label.font="Jetbrains Mono Nl:Bold:13.0"
-	 icon.color=$SAPPHIRE
+	 icon.color=$MAUVE
 	 label.color=$TEXT
 	 icon.padding_left=6
 	 icon.padding_right=2
@@ -19,8 +19,8 @@ default=(
 	 background.padding_left=6
 	 background.padding_right=6
 	 background.height=28
-	 background.color=$MANTLE
-	 background.border_color=$MANTLE
+	 background.color=$CRUST
+	 background.border_color=$CRUST
 	 background.corner_radius=8
 )
 
@@ -34,10 +34,10 @@ do
   space=(
     space="$sid"
     icon="${ICONS_SPACE[i]}"
+    icon.color=$TEXT
     icon.padding_left=5
     icon.padding_right=5
-    icon.color=$TEXT
-    icon.highlight_color=$SURFACE_2
+    icon.highlight_color=$MAUVE
     label.drawing=off
     script="~/.config/sketchybar/plugins/space.sh"
     click_script="yabai -m space --focus $sid"
@@ -52,12 +52,12 @@ sketchybar --add bracket spaces '/space\..*/'                      \
 
 sketchybar --add item date right \
            --set date update_freq=60 \
-	     icon=􀐫 icon.color=$TEAL\
+	     icon=􀐫 \
              script="~/.config/sketchybar/plugins/date.sh" \
 	   --add item clock right \
            --set clock update_freq=2 \
 	     icon=􀉉 \
-	     label.padding_right=2 icon.color=$TEAL\
+	     label.padding_right=2 \
              script="~/.config/sketchybar/plugins/clock.sh" 
 
 
@@ -77,7 +77,7 @@ sketchybar --add item battery right \
            --subscribe battery system_woke power_source_change \
 	   --add item sound right \
 	   --set sound update_freq=2 label.drawing=off \
-	     icon.padding_left=2 \
+	     icon.padding_left=2\
 	     script="~/.config/sketchybar/plugins/sound.sh" \
 	   --add item ip_address right \
 	   --set ip_address update_freq=30 label.drawing=off \
@@ -97,12 +97,12 @@ sketchybar --add item seperator.r2 right                  \
 sketchybar --add item ram right                         \
            --set      ram script="~/.config/sketchybar/plugins/ram.sh"   \
                           update_freq=60                \
-			  icon=$ICON_RAM icon.color=$MAUVE\
+			  icon=$ICON_RAM \
 			  icon.padding_left=2 \
            --add item cpu right                         \
            --set      cpu script="~/.config/sketchybar/plugins/cpu.sh"   \
                           update_freq=60                \
-                          icon=$ICON_CPU icon.color=$MAUVE\
+                          icon=$ICON_CPU \
 			  label.padding_right=2         \
  
 sketchybar --add bracket stats ram cpu \
