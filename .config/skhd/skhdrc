@@ -3,8 +3,8 @@ rcmd + rshift + ralt + rctrl - a : yabai -m display --focus prev
 rcmd + rshift + ralt + rctrl - t : yabai -m display --focus next
 
 # focus display with window shift
-rcmd + rshift + ralt + rctrl + lcmd - a : yabai -m window --display prev --focus
-rcmd + rshift + ralt + rctrl + lcmd - t : yabai -m window --display next --focus
+rcmd + rshift + ralt + rctrl + lalt - a : yabai -m window --display prev --focus
+rcmd + rshift + ralt + rctrl + lalt - t : yabai -m window --display next --focus
 
 # focus window
 rcmd + rshift + ralt + rctrl - e : yabai -m window --focus prev
@@ -20,10 +20,10 @@ rcmd + rshift + ralt + rctrl - k : yabai -m window --resize top:0:-20; yabai -m 
 rcmd + rshift + ralt + rctrl - f : yabai -m window --toggle float;yabai -m window --grid 4:4:1:1:2:2
 
 # warp windows
-# rcmd + rshift + ralt + rctrl + lcmd - h : yabai -m window --warp west
-# rcmd + rshift + ralt + rctrl + lcmd - j : yabai -m window --warp south
-# rcmd + rshift + ralt + rctrl + lcmd - k : yabai -m window --warp north
-# rcmd + rshift + ralt + rctrl + lcmd - l : yabai -m window --warp east
+rcmd + rshift + ralt + rctrl + lalt - h : yabai -m window --warp west
+rcmd + rshift + ralt + rctrl + lalt - j : yabai -m window --warp south
+rcmd + rshift + ralt + rctrl + lalt - k : yabai -m window --warp north
+rcmd + rshift + ralt + rctrl + lalt - l : yabai -m window --warp east
 
 # rotate windows
 rcmd + rshift + ralt + rctrl - z : yabai -m space --rotate 90
@@ -36,27 +36,33 @@ rcmd + rshift + ralt + rctrl - n : yabai -m space --create
 # Delete focused space and focus first space on display
 rcmd + rshift + ralt + rctrl - w : yabai -m space --destroy
 
-
 #move window to prev and next space
-rcmd + rshift + ralt + rctrl + lcmd - 1 : yabai -m window --space 1 --focus
-rcmd + rshift + ralt + rctrl + lcmd - 2 : yabai -m window --space 2 --focus
-rcmd + rshift + ralt + rctrl + lcmd - 3 : yabai -m window --space 3 --focus
-rcmd + rshift + ralt + rctrl + lcmd - 4 : yabai -m window --space 4 --focus
-rcmd + rshift + ralt + rctrl + lcmd - 5 : yabai -m window --space 5 --focus
-rcmd + rshift + ralt + rctrl + lcmd - 6 : yabai -m window --space 6 --focus
-rcmd + rshift + ralt + rctrl + lcmd - 7 : yabai -m window --space 7 --focus
-rcmd + rshift + ralt + rctrl + lcmd - 8 : yabai -m window --space 8 --focus
-rcmd + rshift + ralt + rctrl + lcmd - 9 : yabai -m window --space 9 --focus
-rcmd + rshift + ralt + rctrl + lcmd - 0 : yabai -m window --space 10 --focus
+rcmd + rshift + ralt + rctrl + lalt - 1 : yabai -m window --space 1 --focus
+rcmd + rshift + ralt + rctrl + lalt - 2 : yabai -m window --space 2 --focus
+rcmd + rshift + ralt + rctrl + lalt - 3 : yabai -m window --space 3 --focus
+rcmd + rshift + ralt + rctrl + lalt - 4 : yabai -m window --space 4 --focus
+rcmd + rshift + ralt + rctrl + lalt - 5 : yabai -m window --space 5 --focus
+rcmd + rshift + ralt + rctrl + lalt - 6 : yabai -m window --space 6 --focus
+rcmd + rshift + ralt + rctrl + lalt - 7 : yabai -m window --space 7 --focus
+rcmd + rshift + ralt + rctrl + lalt - 8 : yabai -m window --space 8 --focus
+rcmd + rshift + ralt + rctrl + lalt - 9 : yabai -m window --space 9 --focus
+rcmd + rshift + ralt + rctrl + lalt - 0 : yabai -m window --space 10 --focus
 
 # focus space
 rcmd + rshift + ralt + rctrl - r : yabai -m space --focus prev
 rcmd + rshift + ralt + rctrl - s : yabai -m space --focus next
 
-
 # focus space with window shift
-rcmd + rshift + ralt + rctrl + lcmd - r : yabai -m window --space prev --focus
-rcmd + rshift + ralt + rctrl + lcmd - s : yabai -m window --space next --focus
+rcmd + rshift + ralt + rctrl + lalt - r : yabai -m window --space prev --focus
+rcmd + rshift + ralt + rctrl + lalt - s : yabai -m window --space next --focus
+
+# move space
+rcmd + rshift + ralt + rctrl - q : yabai -m space --move prev
+rcmd + rshift + ralt + rctrl - p : yabai -m space --move next
+
+# move space to another display
+rcmd + rshift + ralt + rctrl + lalt - q : yabai -m space --display prev
+rcmd + rshift + ralt + rctrl + lalt - p : yabai -m space --display next
 
 rcmd + rshift + ralt + rctrl - 1 : yabai -m space --focus 1
 rcmd + rshift + ralt + rctrl - 2 : yabai -m space --focus 2
