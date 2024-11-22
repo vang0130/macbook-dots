@@ -83,7 +83,9 @@ done
 sketchybar --add event input_change AppleSelectedInputSourcesChangedNotification
 
 sketchybar --add item clock right \
-           --set clock update_freq=10 icon=􀇀  script="$PLUGIN_DIR/clock.sh" \
+           --set clock update_freq=10 icon=􀐫  script="$PLUGIN_DIR/clock.sh" \
+           --add item date right \
+           --set date update_freq=10 icon=􀇀  script="$PLUGIN_DIR/date.sh" \
            --add item volume right \
            --set volume script="$PLUGIN_DIR/volume.sh" \
            --subscribe volume volume_change \
@@ -91,10 +93,10 @@ sketchybar --add item clock right \
            --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh" \
            --subscribe battery system_woke power_source_change \
            --add item input_source right \
-           --set input_source update_freq=2 script="$PLUGIN_DIR/input_source.sh" \
+           --set input_source update_freq=0 script="$PLUGIN_DIR/input_source.sh" icon.drawing=off \
            --subscribe input_source input_change \
            --add item wifi right \
-           --set wifi script="$PLUGIN_DIR/wifi.sh" \
+           --set wifi script="$PLUGIN_DIR/wifi.sh" label.drawing=off \
            --subscribe wifi wifi_change 
 
                         #  background.padding_right=12     \

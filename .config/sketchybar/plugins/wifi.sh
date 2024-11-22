@@ -18,14 +18,13 @@ IS_VPN=$(scutil --nwi | grep -m1 'utun' | awk '{ print $1 }')
 if [[ $IP_ADDRESS != "" ]]; then
 	COLOR=$COLOR_WHITE
 	ICON=􀙇
-	LABEL=$IP_ADDRESS
+	# LABEL=$IP_ADDRESS
 else
 	COLOR=$COLOR_WHITE
 	ICON=􀙈
-	LABEL="Not Connected"
+	# LABEL="Not Connected"
 fi
 
-sketchybar --set $NAME \
-	icon=$ICON \
-	label=$LABEL
+sketchybar --set $NAME icon=$ICON 
+	# label=$LABEL
 

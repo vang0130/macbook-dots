@@ -1,0 +1,27 @@
+# focus display
+rcmd + rshift + ralt + rctrl - a : yabai -m display --focus prev
+rcmd + rshift + ralt + rctrl - t : yabai -m display --focus next
+
+# focus window
+rcmd + rshift + ralt + rctrl - e : yabai -m window --focus prev
+rcmd + rshift + ralt + rctrl - i : yabai -m window --focus next
+
+# resize window
+rcmd + rshift + ralt + rctrl - l : yabai -m window --resize right:20:0; yabai -m window --resize left:20:0
+rcmd + rshift + ralt + rctrl - h : yabai -m window --resize left:-20:0; yabai -m window --resize right:-20:0
+rcmd + rshift + ralt + rctrl - j : yabai -m window --resize bottom:0:20; yabai -m window --resize top:0:20
+rcmd + rshift + ralt + rctrl - k : yabai -m window --resize top:0:-20; yabai -m window --resize bottom:0:-20
+
+# float window
+rcmd + rshift + ralt + rctrl - f : yabai -m window --toggle float;yabai -m window --grid 4:4:1:1:2:2
+
+# warp windows
+rcmd + rshift + ralt + rctrl + lcmd - h : yabai -m window --warp west
+rcmd + rshift + ralt + rctrl + lcmd - j : yabai -m window --warp south
+rcmd + rshift + ralt + rctrl + lcmd - k : yabai -m window --warp north
+rcmd + rshift + ralt + rctrl + lcmd - l : yabai -m window --warp east
+
+# rotate windows
+rcmd + rshift + ralt + rctrl - z : yabai -m space --rotate 90
+rcmd + rshift + ralt + rctrl - x : yabai -m space --mirror x-axis 
+rcmd + rshift + ralt + rctrl - y : yabai -m space --mirror y-axis 
