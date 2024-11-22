@@ -74,3 +74,10 @@ rcmd + rshift + ralt + rctrl - 7 : yabai -m space --focus 7
 rcmd + rshift + ralt + rctrl - 8 : yabai -m space --focus 8
 rcmd + rshift + ralt + rctrl - 9 : yabai -m space --focus 9
 rcmd + rshift + ralt + rctrl - 0 : yabai -m space --focus 10
+
+
+# Open iterm2.
+rcmd + rshift + ralt + rctrl - return : osascript -e 'tell application "iTerm2" to create window with default profile command ""' || open -na iTerm
+
+# open Chrome.
+rcmd + rshift + ralt + rctrl + shift - return : open -n -a "Google Chrome"
