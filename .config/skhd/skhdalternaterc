@@ -16,10 +16,10 @@ rcmd + rshift + ralt + rctrl - k : yabai -m window --resize top:0:-20; yabai -m 
 rcmd + rshift + ralt + rctrl - f : yabai -m window --toggle float;yabai -m window --grid 4:4:1:1:2:2
 
 # warp windows
-rcmd + rshift + ralt + rctrl + lcmd - h : yabai -m window --warp west
-rcmd + rshift + ralt + rctrl + lcmd - j : yabai -m window --warp south
-rcmd + rshift + ralt + rctrl + lcmd - k : yabai -m window --warp north
-rcmd + rshift + ralt + rctrl + lcmd - l : yabai -m window --warp east
+rcmd + rshift + ralt + rctrl + lalt - h : yabai -m window --warp west
+rcmd + rshift + ralt + rctrl + lalt - j : yabai -m window --warp south
+rcmd + rshift + ralt + rctrl + lalt - k : yabai -m window --warp north
+rcmd + rshift + ralt + rctrl + lalt - l : yabai -m window --warp east
 
 # rotate windows
 rcmd + rshift + ralt + rctrl - z : yabai -m space --rotate 90
