@@ -1,10 +1,10 @@
 # focus display
-rcmd + rshift + ralt + rctrl - a : yabai -m display --focus prev
-rcmd + rshift + ralt + rctrl - t : yabai -m display --focus next
+rcmd + rshift + ralt + rctrl - a : yabai -m display --focus east
+rcmd + rshift + ralt + rctrl - t : yabai -m display --focus west
 
 # focus display with window shift
-rcmd + rshift + ralt + rctrl + lalt - a : yabai -m window --display prev --focus
-rcmd + rshift + ralt + rctrl + lalt - t : yabai -m window --display next --focus
+rcmd + rshift + ralt + rctrl + lalt - a : yabai -m window --display east; yabai -m display --focus east
+rcmd + rshift + ralt + rctrl + lalt - t : yabai -m window --display west; yabai -m display --focus west
 
 # focus window
 rcmd + rshift + ralt + rctrl - e : yabai -m window --focus prev
@@ -31,7 +31,7 @@ rcmd + rshift + ralt + rctrl - x : yabai -m space --mirror x-axis
 rcmd + rshift + ralt + rctrl - y : yabai -m space --mirror y-axis 
 
 # Create space on the active display
-rcmd + rshift + ralt + rctrl - n : yabai -m space --create
+rcmd + rshift + ralt + rctrl - n : yabai -m space --create 
 
 # Delete focused space and focus first space on display
 rcmd + rshift + ralt + rctrl - w : yabai -m space --destroy
@@ -61,8 +61,8 @@ rcmd + rshift + ralt + rctrl - q : yabai -m space --move prev
 rcmd + rshift + ralt + rctrl - p : yabai -m space --move next
 
 # move space to another display
-rcmd + rshift + ralt + rctrl + lalt - q : yabai -m space --display prev
-rcmd + rshift + ralt + rctrl + lalt - p : yabai -m space --display next
+rcmd + rshift + ralt + rctrl + lalt - q : yabai -m space --display east
+rcmd + rshift + ralt + rctrl + lalt - p : yabai -m space --display west
 
 rcmd + rshift + ralt + rctrl - 1 : yabai -m space --focus 1
 rcmd + rshift + ralt + rctrl - 2 : yabai -m space --focus 2
@@ -76,8 +76,7 @@ rcmd + rshift + ralt + rctrl - 9 : yabai -m space --focus 9
 rcmd + rshift + ralt + rctrl - 0 : yabai -m space --focus 10
 
 # Open iterm2.
-rcmd + rshift + ralt + rctrl - return : open -n "kitty"
+rcmd + rshift + ralt + rctrl - return : osascript -e 'tell application "iTerm2" to create window with default profile command ""' || open -na iTerm
 
-# open Chrome.
+# open Arc.
 rcmd + rshift + ralt + rctrl + shift - return : osascript -e 'tell application "Arc" to make new window' -e 'tell application "Arc" to activate'
-
