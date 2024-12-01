@@ -6,7 +6,7 @@ Bar: sketchybar
 
 Application Launcher: raycast
 
-Terminal: kitty
+Terminal: iTerm2
 
 Terminal prompt: starship
 
@@ -18,5 +18,5 @@ betterdiscord - system24
 
 additional:
 - shortcat
-- btop
+- pywal16
 
